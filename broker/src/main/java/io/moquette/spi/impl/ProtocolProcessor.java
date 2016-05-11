@@ -17,26 +17,14 @@ package io.moquette.spi.impl;
 
 import static io.moquette.parser.netty.Utils.VERSION_3_1;
 import static io.moquette.parser.netty.Utils.VERSION_3_1_1;
-
-import java.nio.ByteBuffer;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
-import java.util.List;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
+import io.moquette.im.PublishMessageBroker;
 import io.moquette.payload.protobuf.PayloadProtoBuf;
 import io.moquette.proto.messages.AbstractMessage;
 import io.moquette.proto.messages.AbstractMessage.QOSType;
 import io.moquette.proto.messages.ConnAckMessage;
 import io.moquette.proto.messages.ConnectMessage;
 import io.moquette.proto.messages.PubAckMessage;
-import io.moquette.proto.messages.PubCompMessage;	
+import io.moquette.proto.messages.PubCompMessage;
 import io.moquette.proto.messages.PubRecMessage;
 import io.moquette.proto.messages.PubRelMessage;
 import io.moquette.proto.messages.PublishMessage;
@@ -55,6 +43,18 @@ import io.moquette.spi.impl.subscriptions.Subscription;
 import io.moquette.spi.impl.subscriptions.SubscriptionsStore;
 import io.moquette.spi.security.IAuthenticator;
 import io.moquette.spi.security.IAuthorizator;
+
+import java.nio.ByteBuffer;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Date;
+import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Class responsible to handle the logic of MQTT protocol it's the director of
@@ -116,7 +116,7 @@ public class ProtocolProcessor {
     private ISessionsStore m_sessionsStore;
     private IAuthenticator m_authenticator;
     private BrokerInterceptor m_interceptor;
-
+    
     //maps clientID to Will testament, if specified on CONNECT
     private ConcurrentMap<String, WillMessage> m_willStore = new ConcurrentHashMap<>();
     
@@ -348,6 +348,10 @@ public class ProtocolProcessor {
         // 将PublishMessage持久化保存
         IMessagesStore.StoredMessage toStoreMsg = asStoredMessage(msg);
         toStoreMsg.setClientID(clientID);
+        
+        // <------ cuidonghuan extends. ------>
+        // 先解析PublishMessage消息类型，之后持久化保存到mysql
+        PublishMessageBroker.getInstance().execute(msg);
         
         if (qos == AbstractMessage.QOSType.MOST_ONE) { //QoS0
             route2Subscribers(toStoreMsg);

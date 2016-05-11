@@ -16,6 +16,7 @@
 package io.moquette.server;
 
 import io.moquette.BrokerConstants;
+import io.moquette.im.PublishMessageBroker;
 import io.moquette.interception.InterceptHandler;
 import io.moquette.proto.messages.PublishMessage;
 import io.moquette.server.config.MemoryConfig;
@@ -27,6 +28,7 @@ import io.moquette.spi.impl.ProtocolProcessor;
 import io.moquette.spi.security.IAuthenticator;
 import io.moquette.spi.security.IAuthorizator;
 import io.moquette.spi.security.ISslContextCreator;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -61,6 +63,14 @@ public class Server {
                 server.stopServer();
             }
         });
+    }
+    
+    // <------ cuidonghuan extends. ------>
+    public void startServer(Class<?> publishMessageParser) throws IOException {
+    	PublishMessageBroker broker = PublishMessageBroker.getInstance();
+    	broker.setPublishMessageParser(publishMessageParser);
+    	
+    	startServer();
     }
     
     /**
