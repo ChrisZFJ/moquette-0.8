@@ -17,7 +17,6 @@ package io.moquette.spi.impl;
 
 import static io.moquette.parser.netty.Utils.VERSION_3_1;
 import static io.moquette.parser.netty.Utils.VERSION_3_1_1;
-import io.moquette.im.PublishMessageBroker;
 import io.moquette.payload.protobuf.PayloadProtoBuf;
 import io.moquette.proto.messages.AbstractMessage;
 import io.moquette.proto.messages.AbstractMessage.QOSType;
@@ -45,6 +44,7 @@ import io.moquette.spi.security.IAuthenticator;
 import io.moquette.spi.security.IAuthorizator;
 
 import java.nio.ByteBuffer;
+import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -120,7 +120,7 @@ public class ProtocolProcessor {
     //maps clientID to Will testament, if specified on CONNECT
     private ConcurrentMap<String, WillMessage> m_willStore = new ConcurrentHashMap<>();
     
-    ProtocolProcessor() {}
+    protected ProtocolProcessor() {}
 
     /**
      * @param subscriptions the subscription store where are stored all the existing
@@ -269,9 +269,9 @@ public class ProtocolProcessor {
         // cuidonghuan添加，扩展“用户上线，推送该状态给所有好友”功能;
         // 通知当前用户的所有好友其在线状态发生改变(上线)
         // msg.getClientId()不是服务器使用的clientId时，推送状态改变的通知
-        if (!containsCertainStrings(msg.getClientID())) {
+        /*if (!containsCertainStrings(msg.getClientID())) {
         	notifyStatesChanged(msg.getClientID(), true);
-		}
+		}*/
     }
 
     private void failedCredentials(ServerChannel session) {
@@ -351,7 +351,7 @@ public class ProtocolProcessor {
         
         // <------ cuidonghuan extends. ------>
         // 先解析PublishMessage消息类型，之后持久化保存到mysql
-        PublishMessageBroker.getInstance().execute(msg);
+//        PublishMessageBroker.getInstance().execute(msg);
         
         if (qos == AbstractMessage.QOSType.MOST_ONE) { //QoS0
             route2Subscribers(toStoreMsg);
@@ -684,12 +684,14 @@ public class ProtocolProcessor {
         m_interceptor.notifyClientDisconnected(clientID);
         LOG.info("DISCONNECT client <{}> finished", clientID, cleanSession);
         
+//        System.out.println("DISCONNECT, current time: " + new Timestamp(System.currentTimeMillis()));
+        
         // cuidonghuan添加，扩展“用户上线，推送该状态给所有好友”功能;
         // 通知当前用户的所有好友其在线状态发生改变（离线）
         // clientID不是服务器使用的clientId时，推送状态改变的通知
-        if (!containsCertainStrings(clientID)) {
+        /*if (!containsCertainStrings(clientID)) {
         	notifyStatesChanged(clientID, true);
-		}
+		}*/
         
     }
 
@@ -710,12 +712,14 @@ public class ProtocolProcessor {
             m_willStore.remove(clientID);
         }
         
+//        System.out.println("Lost connection, current time: " + new Timestamp(System.currentTimeMillis()));
+        
         // cuidonghuan添加，扩展“用户上线，推送该状态给所有好友”功能;
         // 通知当前用户的所有好友其在线状态发生改变(掉线)
         // clientID不是服务器使用的clientId时，推送状态改变的通知
-        if (!containsCertainStrings(clientID)) {
+        /*if (!containsCertainStrings(clientID)) {
         	notifyStatesChanged(clientID, false);
-		}
+		}*/
     }
     
     /**
@@ -865,7 +869,7 @@ public class ProtocolProcessor {
      * @param clientId 当前建立连接的用户的clientId
      * @param online 在线与否
      */
-    private void notifyStatesChanged(String clientId, boolean online) {
+    public void notifyStatesChanged(String clientId, boolean online) {
     	
     	String statesTopicName = "states/" + clientId;
     	List<Subscription> matchedSubscriptions = subscriptions.matches(statesTopicName);
@@ -911,14 +915,14 @@ public class ProtocolProcessor {
             } else {
             	// 该sub.getClientId()订阅者当前是在线状态，推送pubMessage
             	ServerChannel session = m_clientIDs.get(sub.getClientId()).session;
-                LOG.debug("[extends] send states changed message, Session for clientId {} is {}", sub.getClientId(), session);
+//                LOG.debug("[extends] send states changed message, Session for clientId {} is {}", sub.getClientId(), session);
                 session.write(pubMessage);
                 
-                LOG.info("[extends] send states changed message to <{}> on topic <{}>, finished.发送状态改变信息给<{}>所有的好友", sub.getClientId(), statesTopicName, clientId);
+//                LOG.info("[extends] send states changed message to <{}> on topic <{}>, finished.发送状态改变信息给<{}>所有的好友", sub.getClientId(), statesTopicName, clientId);
             }
         }
         
-        LOG.info("[extends] send states changed message to <{}>'s friends on topic <{}>, finished.", clientId, statesTopicName);
+//        LOG.info("[extends] send states changed message to <{}>'s friends on topic <{}>, finished.", clientId, statesTopicName);
     }
     
     /**
@@ -926,7 +930,7 @@ public class ProtocolProcessor {
      * @param str 需要判断的字符串
      * @return 判断结果
      */
-    private boolean containsCertainStrings(String str) {
+    public boolean containsCertainStrings(String str) {
     	
     	if (str.length() < 7) {
 			return false;

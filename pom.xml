@@ -56,7 +56,7 @@
         <module>broker</module>
         <!-- <module>distribution</module> -->
         <!-- <module>embedding_moquette</module> -->
-        <module>moquette-im</module>
+        <module>im</module>
     </modules>
 
     <reporting>

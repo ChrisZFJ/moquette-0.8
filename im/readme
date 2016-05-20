@@ -1,0 +1,2 @@
+扩展说明：
+1.为了使用cglib动态代理ProtocolProcessor,修改ProtocolProcessor的构造方法的权限限制符由package->protected
