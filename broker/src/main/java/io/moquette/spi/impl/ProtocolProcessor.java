@@ -330,6 +330,7 @@ public class ProtocolProcessor {
     }
     
     public void processPublish(ServerChannel session, PublishMessage msg) {
+    	
         LOG.trace("PUB --PUBLISH--> SRV executePublish invoked with {}", msg);
         String clientID = (String) session.getAttribute(NettyChannel.ATTR_KEY_CLIENTID);
         final String topic = msg.getTopicName();
@@ -869,9 +870,10 @@ public class ProtocolProcessor {
      * @param clientId 当前建立连接的用户的clientId
      * @param online 在线与否
      */
-    public void notifyStatesChanged(String clientId, boolean online) {
+    public void notifyStatesChanged(ServerChannel session, boolean online) {
     	
-    	String statesTopicName = "states/" + clientId;
+    	/*String clientID = (String) session.getAttribute(NettyChannel.ATTR_KEY_CLIENTID);
+    	String statesTopicName = "states/" + clientID;
     	List<Subscription> matchedSubscriptions = subscriptions.matches(statesTopicName);
     	if (matchedSubscriptions == null || matchedSubscriptions.size() ==0) {
     		// 当前用户还没有任何好友
@@ -882,7 +884,7 @@ public class ProtocolProcessor {
     	PayloadProtoBuf.Payload.StatesManager states = PayloadProtoBuf.Payload.StatesManager
     			.newBuilder()
     			.setOnline(online)
-    			.setUsername(clientId)
+    			.setUsername(clientID)
     			.build();
     	// MessageType:0x005,表示 IM_MESSAGE_TYPE_STATES 跟状态改变有关的消息类型
     	PayloadProtoBuf.Payload payloadProtoBuf = PayloadProtoBuf.Payload.newBuilder()
@@ -892,11 +894,12 @@ public class ProtocolProcessor {
     	ByteBuffer message = ByteBuffer.wrap(payloadProtoBuf.toByteArray());
     	message.rewind();
     	
-    	PublishMessage pubMessage = new PublishMessage();
-        pubMessage.setRetainFlag(false);
-        pubMessage.setTopicName(statesTopicName);
-        pubMessage.setQos(AbstractMessage.QOSType.MOST_ONE);
-        pubMessage.setPayload(message);
+    	PublishMessage msg = new PublishMessage();
+    	msg.setRetainFlag(false);
+    	msg.setTopicName(statesTopicName);
+    	msg.setQos(AbstractMessage.QOSType.MOST_ONE);
+    	msg.setPayload(message);
+//    	msg.set
 
         if (m_clientIDs == null) {
             throw new RuntimeException("Internal bad error, found m_clientIDs to null while it should be initialized, somewhere it's overwritten!!");
@@ -904,7 +907,7 @@ public class ProtocolProcessor {
         LOG.debug("clientIDs are {}", m_clientIDs);
         
         // 找到订阅了statesTopicName主题的所有在线订阅者，将状态改变（上线）消息pubMessage推送下去
-        for (final Subscription sub : matchedSubscriptions) {
+        for (Subscription sub : matchedSubscriptions) {
             
             // 该sub.getClientId()订阅者当前是离线状态，不推送pubMessage
             if (m_clientIDs.get(sub.getClientId()) == null) {
@@ -917,12 +920,108 @@ public class ProtocolProcessor {
             	ServerChannel session = m_clientIDs.get(sub.getClientId()).session;
 //                LOG.debug("[extends] send states changed message, Session for clientId {} is {}", sub.getClientId(), session);
                 session.write(pubMessage);
-                
-//                LOG.info("[extends] send states changed message to <{}> on topic <{}>, finished.发送状态改变信息给<{}>所有的好友", sub.getClientId(), statesTopicName, clientId);
+                LOG.info("NOTIFY states changed message to <{}> on topic <{}>, finished. notify online?<{}> message to <{}>'s all friends.", sub.getClientId(), statesTopicName, online, clientId);
             }
         }
         
-//        LOG.info("[extends] send states changed message to <{}>'s friends on topic <{}>, finished.", clientId, statesTopicName);
+        
+        //check if the topic can be wrote
+        String user = (String) session.getAttribute(NettyChannel.ATTR_KEY_USERNAME);
+        if (!m_authorizator.canWrite(topic, user, clientID)) {
+            LOG.debug("topic {} doesn't have write credentials", topic);
+            return;
+        }
+        final AbstractMessage.QOSType qos = msg.getQos();
+        final Integer messageID = msg.getMessageID();
+        LOG.info("PUBLISH from clientID <{}> on topic <{}> with QoS {}", clientID, statesTopicName, AbstractMessage.QOSType.MOST_ONE);
+
+        String guid = null;
+        
+        // 将PublishMessage持久化保存
+        IMessagesStore.StoredMessage toStoreMsg = asStoredMessage(msg);
+        toStoreMsg.setClientID(clientID);
+        
+        // <------ cuidonghuan extends. ------>
+        // 先解析PublishMessage消息类型，之后持久化保存到mysql
+//        PublishMessageBroker.getInstance().execute(msg);
+        
+        route2Subscribers(toStoreMsg);
+        
+        if (qos == AbstractMessage.QOSType.MOST_ONE) { //QoS0
+            route2Subscribers(toStoreMsg);
+        } else if (qos == AbstractMessage.QOSType.LEAST_ONE) { //QoS1
+            route2Subscribers(toStoreMsg);
+            sendPubAck(clientID, messageID);
+            LOG.debug("replying with PubAck to MSG ID {}", messageID);
+        } else if (qos == AbstractMessage.QOSType.EXACTLY_ONCE) { //QoS2
+            guid = m_messagesStore.storePublishForFuture(toStoreMsg);
+            sendPubRec(clientID, messageID);
+            //Next the client will send us a pub rel
+            //NB publish to subscribers for QoS 2 happen upon PUBREL from publisher
+        }
+
+        if (msg.isRetainFlag()) {
+            if (qos == AbstractMessage.QOSType.MOST_ONE) {
+                //QoS == 0 && retain => clean old retained
+                m_messagesStore.cleanRetained(topic);
+            } else {
+                if (!msg.getPayload().hasRemaining()) {
+                    m_messagesStore.cleanRetained(topic);
+                } else {
+                    if (guid == null) {
+                        //before wasn't stored
+                        guid = m_messagesStore.storePublishForFuture(toStoreMsg);
+                    }
+                    m_messagesStore.storeRetained(topic, guid);
+                }
+            }
+        }
+        m_interceptor.notifyTopicPublished(msg, clientID);*/
+        
+    	String clientID = (String) session.getAttribute(NettyChannel.ATTR_KEY_CLIENTID);
+    	String statesTopicName = "states/" + clientID;
+    	
+    	// 构造payload对象
+    	PayloadProtoBuf.Payload.StatesManager states = PayloadProtoBuf.Payload.StatesManager
+    			.newBuilder()
+    			.setOnline(online)
+    			.setUsername(clientID)
+    			.build();
+    	// MessageType:0x005,表示 IM_MESSAGE_TYPE_STATES 跟状态改变有关的消息类型
+    	PayloadProtoBuf.Payload payloadProtoBuf = PayloadProtoBuf.Payload.newBuilder()
+    			.setStatesManager(states)
+    			.setMessageType(0x005)
+    			.build();
+    	ByteBuffer payl = ByteBuffer.wrap(payloadProtoBuf.toByteArray());
+    	payl.rewind();
+    	
+    	PublishMessage msg = new PublishMessage();
+    	msg.setRetainFlag(false);
+    	msg.setTopicName(statesTopicName);
+    	msg.setQos(AbstractMessage.QOSType.MOST_ONE);
+    	msg.setMessageID(1);
+    	msg.setMessageType(VERSION_3_1_1);
+    	msg.setPayload(payl);
+    	
+        // 将PublishMessage持久化保存
+        IMessagesStore.StoredMessage pubMsg = asStoredMessage(msg);
+        pubMsg.setClientID(clientID);
+        
+        final ByteBuffer origMessage = pubMsg.getMessage();
+        
+        for (final Subscription sub : subscriptions.matches(statesTopicName)) {
+
+            ClientSession targetSession = m_sessionsStore.sessionForClient(sub.getClientId());
+            verifyToActivate(sub.getClientId(), targetSession);
+
+            ByteBuffer message = origMessage.duplicate();
+            if (targetSession.isActive()) {
+                //QoS 0
+                directSend(targetSession, statesTopicName, AbstractMessage.QOSType.MOST_ONE, message, false, null);
+            }
+        }
+        
+        m_interceptor.notifyTopicPublished(msg, clientID);
     }
     
     /**

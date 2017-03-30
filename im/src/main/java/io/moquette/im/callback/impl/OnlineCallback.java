@@ -3,6 +3,7 @@ package io.moquette.im.callback.impl;
 import io.moquette.im.processor.StateChangeProcessor;
 import io.moquette.im.proxy.ProtocolProcessorProxy;
 import io.moquette.proto.messages.ConnectMessage;
+import io.moquette.server.ServerChannel;
 
 import java.lang.reflect.Method;
 
@@ -27,7 +28,7 @@ public class OnlineCallback implements MethodInterceptor {
 		// 推送上线通知
 		if(!ProtocolProcessorProxy.getInstance().containsCertainStrings(clientId)) {
 			// 调用notifyStatesChanged()方法
-			ProtocolProcessorProxy.getInstance().notifyStatesChanged(clientId, true);
+			ProtocolProcessorProxy.getInstance().notifyStatesChanged(((ServerChannel)args[0]), true);
 			System.out.println(" [moquette-im] [OnlineCallback] 用户" + clientId + "上线了!");
 		}
 		

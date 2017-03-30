@@ -32,23 +32,25 @@ public class OfflineCallback implements MethodInterceptor {
 		// 主动离线
 		if("processDisconnect".equals(method.getName())) {
 			clientId = (String) (((ServerChannel)args[0]).getAttribute(NettyChannel.ATTR_KEY_CLIENTID));
-		} else if("processConnectionLost".equals(method.getName())) {
+			
+			// 回调离线处理方法	
+			StateChangeProcessor.getInstance(null).onOffline(clientId);
+			
+			// 判断是否为server_clientId触发，若是则不推送离线通知.
+			if(!ProtocolProcessorProxy.getInstance().containsCertainStrings(clientId)) {
+				// 调用notifyStatesChanged()方法
+				ProtocolProcessorProxy.getInstance().notifyStatesChanged(((ServerChannel)args[0]), false);
+				System.out.println(" [moquette-im] [OnlineCallback] 用户" + clientId + "离线了! caused by " + "[" + method.getName() + "]");
+			}
+			
+		} /*else if("processConnectionLost".equals(method.getName())) {
 			// 被动离线(比如客户端崩溃或者被挤下线)
 			clientId = (String) args[0];
+			System.out.println(" [moquette-im] [OfflineCallback] 被动离线，ConnectionLost...");
 		} else {
 			System.out.println(" [moquette-im] [OfflineCallback] 无法获得下线的clientId!");
 			return result;
-		}
-		
-		// 回调离线处理方法	
-		StateChangeProcessor.getInstance(null).onOffline(clientId);
-		
-		// 判断是否为server_clientId触发，若是则不推送离线通知.
-		if(!ProtocolProcessorProxy.getInstance().containsCertainStrings(clientId)) {
-			// 调用notifyStatesChanged()方法
-			ProtocolProcessorProxy.getInstance().notifyStatesChanged(clientId, false);
-			System.out.println(" [moquette-im] [OnlineCallback] 用户" + clientId + "离线了! caused by " + "[" + method.getName() + "]");
-		}
+		}*/
 		
 		return result;
 	}
