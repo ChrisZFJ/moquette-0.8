@@ -16,7 +16,7 @@ public final class PayloadProtoBuf {
      * <code>optional int32 messageType = 1;</code>
      *
      * <pre>
-     * IMÏûÏ¢ÀàĞÍ
+     * IMæ¶ˆæ¯ç±»å‹
      * </pre>
      */
     boolean hasMessageType();
@@ -24,7 +24,7 @@ public final class PayloadProtoBuf {
      * <code>optional int32 messageType = 1;</code>
      *
      * <pre>
-     * IMÏûÏ¢ÀàĞÍ
+     * IMæ¶ˆæ¯ç±»å‹
      * </pre>
      */
     int getMessageType();
@@ -33,7 +33,7 @@ public final class PayloadProtoBuf {
      * <code>optional .io.moquette.payload.protobuf.Payload.FriendManager friendManager = 2;</code>
      *
      * <pre>
-     * ºÃÓÑ¹ÜÀí¶ÔÏó
+     * å¥½å‹ç®¡ç†å¯¹è±¡
      * </pre>
      */
     boolean hasFriendManager();
@@ -41,7 +41,7 @@ public final class PayloadProtoBuf {
      * <code>optional .io.moquette.payload.protobuf.Payload.FriendManager friendManager = 2;</code>
      *
      * <pre>
-     * ºÃÓÑ¹ÜÀí¶ÔÏó
+     * å¥½å‹ç®¡ç†å¯¹è±¡
      * </pre>
      */
     io.moquette.payload.protobuf.PayloadProtoBuf.Payload.FriendManager getFriendManager();
@@ -50,7 +50,7 @@ public final class PayloadProtoBuf {
      * <code>optional .io.moquette.payload.protobuf.Payload.MessageManager messageManager = 3;</code>
      *
      * <pre>
-     * ÏûÏ¢¹ÜÀí¶ÔÏó
+     * æ¶ˆæ¯ç®¡ç†å¯¹è±¡
      * </pre>
      */
     boolean hasMessageManager();
@@ -58,7 +58,7 @@ public final class PayloadProtoBuf {
      * <code>optional .io.moquette.payload.protobuf.Payload.MessageManager messageManager = 3;</code>
      *
      * <pre>
-     * ÏûÏ¢¹ÜÀí¶ÔÏó
+     * æ¶ˆæ¯ç®¡ç†å¯¹è±¡
      * </pre>
      */
     io.moquette.payload.protobuf.PayloadProtoBuf.Payload.MessageManager getMessageManager();
@@ -67,7 +67,7 @@ public final class PayloadProtoBuf {
      * <code>optional .io.moquette.payload.protobuf.Payload.StatesManager statesManager = 4;</code>
      *
      * <pre>
-     * ×´Ì¬¹ÜÀí¶ÔÏó
+     * çŠ¶æ€ç®¡ç†å¯¹è±¡
      * </pre>
      */
     boolean hasStatesManager();
@@ -75,7 +75,7 @@ public final class PayloadProtoBuf {
      * <code>optional .io.moquette.payload.protobuf.Payload.StatesManager statesManager = 4;</code>
      *
      * <pre>
-     * ×´Ì¬¹ÜÀí¶ÔÏó
+     * çŠ¶æ€ç®¡ç†å¯¹è±¡
      * </pre>
      */
     io.moquette.payload.protobuf.PayloadProtoBuf.Payload.StatesManager getStatesManager();
@@ -275,7 +275,7 @@ public final class PayloadProtoBuf {
        * <code>optional int32 actionType = 6;</code>
        *
        * <pre>
-       * actionÀàĞÍ
+       * actionç±»å‹
        * </pre>
        */
       boolean hasActionType();
@@ -283,7 +283,7 @@ public final class PayloadProtoBuf {
        * <code>optional int32 actionType = 6;</code>
        *
        * <pre>
-       * actionÀàĞÍ
+       * actionç±»å‹
        * </pre>
        */
       int getActionType();
@@ -330,7 +330,7 @@ public final class PayloadProtoBuf {
        * <code>optional string messageContent = 9;</code>
        *
        * <pre>
-       * Í¨ÖªĞÅÏ¢	
+       * é€šçŸ¥ä¿¡æ¯	
        * </pre>
        */
       boolean hasMessageContent();
@@ -338,7 +338,7 @@ public final class PayloadProtoBuf {
        * <code>optional string messageContent = 9;</code>
        *
        * <pre>
-       * Í¨ÖªĞÅÏ¢	
+       * é€šçŸ¥ä¿¡æ¯	
        * </pre>
        */
       java.lang.String getMessageContent();
@@ -346,7 +346,7 @@ public final class PayloadProtoBuf {
        * <code>optional string messageContent = 9;</code>
        *
        * <pre>
-       * Í¨ÖªĞÅÏ¢	
+       * é€šçŸ¥ä¿¡æ¯	
        * </pre>
        */
       com.google.protobuf.ByteString
@@ -356,7 +356,7 @@ public final class PayloadProtoBuf {
        * <code>repeated string groupMembersList = 10;</code>
        *
        * <pre>
-       * Èº³ÉÔ±ÁĞ±í		
+       * ç¾¤æˆå‘˜åˆ—è¡¨		
        * </pre>
        */
       com.google.protobuf.ProtocolStringList
@@ -365,7 +365,7 @@ public final class PayloadProtoBuf {
        * <code>repeated string groupMembersList = 10;</code>
        *
        * <pre>
-       * Èº³ÉÔ±ÁĞ±í		
+       * ç¾¤æˆå‘˜åˆ—è¡¨		
        * </pre>
        */
       int getGroupMembersListCount();
@@ -373,7 +373,7 @@ public final class PayloadProtoBuf {
        * <code>repeated string groupMembersList = 10;</code>
        *
        * <pre>
-       * Èº³ÉÔ±ÁĞ±í		
+       * ç¾¤æˆå‘˜åˆ—è¡¨		
        * </pre>
        */
       java.lang.String getGroupMembersList(int index);
@@ -381,7 +381,7 @@ public final class PayloadProtoBuf {
        * <code>repeated string groupMembersList = 10;</code>
        *
        * <pre>
-       * Èº³ÉÔ±ÁĞ±í		
+       * ç¾¤æˆå‘˜åˆ—è¡¨		
        * </pre>
        */
       com.google.protobuf.ByteString
@@ -391,7 +391,7 @@ public final class PayloadProtoBuf {
      * Protobuf type {@code io.moquette.payload.protobuf.Payload.FriendManager}
      *
      * <pre>
-     * ºÃÓÑ¹ÜÀíÏûÏ¢Ìå
+     * å¥½å‹ç®¡ç†æ¶ˆæ¯ä½“
      * </pre>
      */
     public static final class FriendManager extends
@@ -712,7 +712,7 @@ public final class PayloadProtoBuf {
        * <code>optional int32 actionType = 6;</code>
        *
        * <pre>
-       * actionÀàĞÍ
+       * actionç±»å‹
        * </pre>
        */
       public boolean hasActionType() {
@@ -722,7 +722,7 @@ public final class PayloadProtoBuf {
        * <code>optional int32 actionType = 6;</code>
        *
        * <pre>
-       * actionÀàĞÍ
+       * actionç±»å‹
        * </pre>
        */
       public int getActionType() {
@@ -793,7 +793,7 @@ public final class PayloadProtoBuf {
        * <code>optional string messageContent = 9;</code>
        *
        * <pre>
-       * Í¨ÖªĞÅÏ¢	
+       * é€šçŸ¥ä¿¡æ¯	
        * </pre>
        */
       public boolean hasMessageContent() {
@@ -803,7 +803,7 @@ public final class PayloadProtoBuf {
        * <code>optional string messageContent = 9;</code>
        *
        * <pre>
-       * Í¨ÖªĞÅÏ¢	
+       * é€šçŸ¥ä¿¡æ¯	
        * </pre>
        */
       public java.lang.String getMessageContent() {
@@ -824,7 +824,7 @@ public final class PayloadProtoBuf {
        * <code>optional string messageContent = 9;</code>
        *
        * <pre>
-       * Í¨ÖªĞÅÏ¢	
+       * é€šçŸ¥ä¿¡æ¯	
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -847,7 +847,7 @@ public final class PayloadProtoBuf {
        * <code>repeated string groupMembersList = 10;</code>
        *
        * <pre>
-       * Èº³ÉÔ±ÁĞ±í		
+       * ç¾¤æˆå‘˜åˆ—è¡¨		
        * </pre>
        */
       public com.google.protobuf.ProtocolStringList
@@ -858,7 +858,7 @@ public final class PayloadProtoBuf {
        * <code>repeated string groupMembersList = 10;</code>
        *
        * <pre>
-       * Èº³ÉÔ±ÁĞ±í		
+       * ç¾¤æˆå‘˜åˆ—è¡¨		
        * </pre>
        */
       public int getGroupMembersListCount() {
@@ -868,7 +868,7 @@ public final class PayloadProtoBuf {
        * <code>repeated string groupMembersList = 10;</code>
        *
        * <pre>
-       * Èº³ÉÔ±ÁĞ±í		
+       * ç¾¤æˆå‘˜åˆ—è¡¨		
        * </pre>
        */
       public java.lang.String getGroupMembersList(int index) {
@@ -878,7 +878,7 @@ public final class PayloadProtoBuf {
        * <code>repeated string groupMembersList = 10;</code>
        *
        * <pre>
-       * Èº³ÉÔ±ÁĞ±í		
+       * ç¾¤æˆå‘˜åˆ—è¡¨		
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -1081,7 +1081,7 @@ public final class PayloadProtoBuf {
        * Protobuf type {@code io.moquette.payload.protobuf.Payload.FriendManager}
        *
        * <pre>
-       * ºÃÓÑ¹ÜÀíÏûÏ¢Ìå
+       * å¥½å‹ç®¡ç†æ¶ˆæ¯ä½“
        * </pre>
        */
       public static final class Builder extends
@@ -1579,7 +1579,7 @@ public final class PayloadProtoBuf {
          * <code>optional int32 actionType = 6;</code>
          *
          * <pre>
-         * actionÀàĞÍ
+         * actionç±»å‹
          * </pre>
          */
         public boolean hasActionType() {
@@ -1589,7 +1589,7 @@ public final class PayloadProtoBuf {
          * <code>optional int32 actionType = 6;</code>
          *
          * <pre>
-         * actionÀàĞÍ
+         * actionç±»å‹
          * </pre>
          */
         public int getActionType() {
@@ -1599,7 +1599,7 @@ public final class PayloadProtoBuf {
          * <code>optional int32 actionType = 6;</code>
          *
          * <pre>
-         * actionÀàĞÍ
+         * actionç±»å‹
          * </pre>
          */
         public Builder setActionType(int value) {
@@ -1612,7 +1612,7 @@ public final class PayloadProtoBuf {
          * <code>optional int32 actionType = 6;</code>
          *
          * <pre>
-         * actionÀàĞÍ
+         * actionç±»å‹
          * </pre>
          */
         public Builder clearActionType() {
@@ -1813,7 +1813,7 @@ public final class PayloadProtoBuf {
          * <code>optional string messageContent = 9;</code>
          *
          * <pre>
-         * Í¨ÖªĞÅÏ¢	
+         * é€šçŸ¥ä¿¡æ¯	
          * </pre>
          */
         public boolean hasMessageContent() {
@@ -1823,7 +1823,7 @@ public final class PayloadProtoBuf {
          * <code>optional string messageContent = 9;</code>
          *
          * <pre>
-         * Í¨ÖªĞÅÏ¢	
+         * é€šçŸ¥ä¿¡æ¯	
          * </pre>
          */
         public java.lang.String getMessageContent() {
@@ -1844,7 +1844,7 @@ public final class PayloadProtoBuf {
          * <code>optional string messageContent = 9;</code>
          *
          * <pre>
-         * Í¨ÖªĞÅÏ¢	
+         * é€šçŸ¥ä¿¡æ¯	
          * </pre>
          */
         public com.google.protobuf.ByteString
@@ -1864,7 +1864,7 @@ public final class PayloadProtoBuf {
          * <code>optional string messageContent = 9;</code>
          *
          * <pre>
-         * Í¨ÖªĞÅÏ¢	
+         * é€šçŸ¥ä¿¡æ¯	
          * </pre>
          */
         public Builder setMessageContent(
@@ -1881,7 +1881,7 @@ public final class PayloadProtoBuf {
          * <code>optional string messageContent = 9;</code>
          *
          * <pre>
-         * Í¨ÖªĞÅÏ¢	
+         * é€šçŸ¥ä¿¡æ¯	
          * </pre>
          */
         public Builder clearMessageContent() {
@@ -1894,7 +1894,7 @@ public final class PayloadProtoBuf {
          * <code>optional string messageContent = 9;</code>
          *
          * <pre>
-         * Í¨ÖªĞÅÏ¢	
+         * é€šçŸ¥ä¿¡æ¯	
          * </pre>
          */
         public Builder setMessageContentBytes(
@@ -1919,7 +1919,7 @@ public final class PayloadProtoBuf {
          * <code>repeated string groupMembersList = 10;</code>
          *
          * <pre>
-         * Èº³ÉÔ±ÁĞ±í		
+         * ç¾¤æˆå‘˜åˆ—è¡¨		
          * </pre>
          */
         public com.google.protobuf.ProtocolStringList
@@ -1930,7 +1930,7 @@ public final class PayloadProtoBuf {
          * <code>repeated string groupMembersList = 10;</code>
          *
          * <pre>
-         * Èº³ÉÔ±ÁĞ±í		
+         * ç¾¤æˆå‘˜åˆ—è¡¨		
          * </pre>
          */
         public int getGroupMembersListCount() {
@@ -1940,7 +1940,7 @@ public final class PayloadProtoBuf {
          * <code>repeated string groupMembersList = 10;</code>
          *
          * <pre>
-         * Èº³ÉÔ±ÁĞ±í		
+         * ç¾¤æˆå‘˜åˆ—è¡¨		
          * </pre>
          */
         public java.lang.String getGroupMembersList(int index) {
@@ -1950,7 +1950,7 @@ public final class PayloadProtoBuf {
          * <code>repeated string groupMembersList = 10;</code>
          *
          * <pre>
-         * Èº³ÉÔ±ÁĞ±í		
+         * ç¾¤æˆå‘˜åˆ—è¡¨		
          * </pre>
          */
         public com.google.protobuf.ByteString
@@ -1961,7 +1961,7 @@ public final class PayloadProtoBuf {
          * <code>repeated string groupMembersList = 10;</code>
          *
          * <pre>
-         * Èº³ÉÔ±ÁĞ±í		
+         * ç¾¤æˆå‘˜åˆ—è¡¨		
          * </pre>
          */
         public Builder setGroupMembersList(
@@ -1978,7 +1978,7 @@ public final class PayloadProtoBuf {
          * <code>repeated string groupMembersList = 10;</code>
          *
          * <pre>
-         * Èº³ÉÔ±ÁĞ±í		
+         * ç¾¤æˆå‘˜åˆ—è¡¨		
          * </pre>
          */
         public Builder addGroupMembersList(
@@ -1995,7 +1995,7 @@ public final class PayloadProtoBuf {
          * <code>repeated string groupMembersList = 10;</code>
          *
          * <pre>
-         * Èº³ÉÔ±ÁĞ±í		
+         * ç¾¤æˆå‘˜åˆ—è¡¨		
          * </pre>
          */
         public Builder addAllGroupMembersList(
@@ -2010,7 +2010,7 @@ public final class PayloadProtoBuf {
          * <code>repeated string groupMembersList = 10;</code>
          *
          * <pre>
-         * Èº³ÉÔ±ÁĞ±í		
+         * ç¾¤æˆå‘˜åˆ—è¡¨		
          * </pre>
          */
         public Builder clearGroupMembersList() {
@@ -2023,7 +2023,7 @@ public final class PayloadProtoBuf {
          * <code>repeated string groupMembersList = 10;</code>
          *
          * <pre>
-         * Èº³ÉÔ±ÁĞ±í		
+         * ç¾¤æˆå‘˜åˆ—è¡¨		
          * </pre>
          */
         public Builder addGroupMembersListBytes(
@@ -2107,7 +2107,7 @@ public final class PayloadProtoBuf {
        * <code>optional bool isSingleMessage = 5;</code>
        *
        * <pre>
-       * ÊÇ·ñÎªµ¥ÁÄÏûÏ¢£¬Ä¬ÈÏÊÇ
+       * æ˜¯å¦ä¸ºå•èŠæ¶ˆæ¯ï¼Œé»˜è®¤æ˜¯
        * </pre>
        */
       boolean hasIsSingleMessage();
@@ -2115,7 +2115,7 @@ public final class PayloadProtoBuf {
        * <code>optional bool isSingleMessage = 5;</code>
        *
        * <pre>
-       * ÊÇ·ñÎªµ¥ÁÄÏûÏ¢£¬Ä¬ÈÏÊÇ
+       * æ˜¯å¦ä¸ºå•èŠæ¶ˆæ¯ï¼Œé»˜è®¤æ˜¯
        * </pre>
        */
       boolean getIsSingleMessage();
@@ -2124,7 +2124,7 @@ public final class PayloadProtoBuf {
      * Protobuf type {@code io.moquette.payload.protobuf.Payload.MessageManager}
      *
      * <pre>
-     * ÏûÏ¢¹ÜÀíÌå
+     * æ¶ˆæ¯ç®¡ç†ä½“
      * </pre>
      */
     public static final class MessageManager extends
@@ -2383,7 +2383,7 @@ public final class PayloadProtoBuf {
        * <code>optional bool isSingleMessage = 5;</code>
        *
        * <pre>
-       * ÊÇ·ñÎªµ¥ÁÄÏûÏ¢£¬Ä¬ÈÏÊÇ
+       * æ˜¯å¦ä¸ºå•èŠæ¶ˆæ¯ï¼Œé»˜è®¤æ˜¯
        * </pre>
        */
       public boolean hasIsSingleMessage() {
@@ -2393,7 +2393,7 @@ public final class PayloadProtoBuf {
        * <code>optional bool isSingleMessage = 5;</code>
        *
        * <pre>
-       * ÊÇ·ñÎªµ¥ÁÄÏûÏ¢£¬Ä¬ÈÏÊÇ
+       * æ˜¯å¦ä¸ºå•èŠæ¶ˆæ¯ï¼Œé»˜è®¤æ˜¯
        * </pre>
        */
       public boolean getIsSingleMessage() {
@@ -2540,7 +2540,7 @@ public final class PayloadProtoBuf {
        * Protobuf type {@code io.moquette.payload.protobuf.Payload.MessageManager}
        *
        * <pre>
-       * ÏûÏ¢¹ÜÀíÌå
+       * æ¶ˆæ¯ç®¡ç†ä½“
        * </pre>
        */
       public static final class Builder extends
@@ -2935,7 +2935,7 @@ public final class PayloadProtoBuf {
          * <code>optional bool isSingleMessage = 5;</code>
          *
          * <pre>
-         * ÊÇ·ñÎªµ¥ÁÄÏûÏ¢£¬Ä¬ÈÏÊÇ
+         * æ˜¯å¦ä¸ºå•èŠæ¶ˆæ¯ï¼Œé»˜è®¤æ˜¯
          * </pre>
          */
         public boolean hasIsSingleMessage() {
@@ -2945,7 +2945,7 @@ public final class PayloadProtoBuf {
          * <code>optional bool isSingleMessage = 5;</code>
          *
          * <pre>
-         * ÊÇ·ñÎªµ¥ÁÄÏûÏ¢£¬Ä¬ÈÏÊÇ
+         * æ˜¯å¦ä¸ºå•èŠæ¶ˆæ¯ï¼Œé»˜è®¤æ˜¯
          * </pre>
          */
         public boolean getIsSingleMessage() {
@@ -2955,7 +2955,7 @@ public final class PayloadProtoBuf {
          * <code>optional bool isSingleMessage = 5;</code>
          *
          * <pre>
-         * ÊÇ·ñÎªµ¥ÁÄÏûÏ¢£¬Ä¬ÈÏÊÇ
+         * æ˜¯å¦ä¸ºå•èŠæ¶ˆæ¯ï¼Œé»˜è®¤æ˜¯
          * </pre>
          */
         public Builder setIsSingleMessage(boolean value) {
@@ -2968,7 +2968,7 @@ public final class PayloadProtoBuf {
          * <code>optional bool isSingleMessage = 5;</code>
          *
          * <pre>
-         * ÊÇ·ñÎªµ¥ÁÄÏûÏ¢£¬Ä¬ÈÏÊÇ
+         * æ˜¯å¦ä¸ºå•èŠæ¶ˆæ¯ï¼Œé»˜è®¤æ˜¯
          * </pre>
          */
         public Builder clearIsSingleMessage() {
@@ -2997,7 +2997,7 @@ public final class PayloadProtoBuf {
        * <code>optional string username = 1;</code>
        *
        * <pre>
-       * ×´Ì¬·¢Éú¸Ä±äµÄÓÃ»§Ãû
+       * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„ç”¨æˆ·å
        * </pre>
        */
       boolean hasUsername();
@@ -3005,7 +3005,7 @@ public final class PayloadProtoBuf {
        * <code>optional string username = 1;</code>
        *
        * <pre>
-       * ×´Ì¬·¢Éú¸Ä±äµÄÓÃ»§Ãû
+       * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„ç”¨æˆ·å
        * </pre>
        */
       java.lang.String getUsername();
@@ -3013,7 +3013,7 @@ public final class PayloadProtoBuf {
        * <code>optional string username = 1;</code>
        *
        * <pre>
-       * ×´Ì¬·¢Éú¸Ä±äµÄÓÃ»§Ãû
+       * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„ç”¨æˆ·å
        * </pre>
        */
       com.google.protobuf.ByteString
@@ -3023,7 +3023,7 @@ public final class PayloadProtoBuf {
        * <code>optional bool online = 2;</code>
        *
        * <pre>
-       * ÊÇ·ñÔÚÏß±êÖ¾
+       * æ˜¯å¦åœ¨çº¿æ ‡å¿—
        * </pre>
        */
       boolean hasOnline();
@@ -3031,7 +3031,7 @@ public final class PayloadProtoBuf {
        * <code>optional bool online = 2;</code>
        *
        * <pre>
-       * ÊÇ·ñÔÚÏß±êÖ¾
+       * æ˜¯å¦åœ¨çº¿æ ‡å¿—
        * </pre>
        */
       boolean getOnline();
@@ -3040,7 +3040,7 @@ public final class PayloadProtoBuf {
        * <code>optional string stateChangedTime = 3;</code>
        *
        * <pre>
-       * ×´Ì¬·¢Éú¸Ä±äµÄÊ±¼ä´Á
+       * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„æ—¶é—´æˆ³
        * </pre>
        */
       boolean hasStateChangedTime();
@@ -3048,7 +3048,7 @@ public final class PayloadProtoBuf {
        * <code>optional string stateChangedTime = 3;</code>
        *
        * <pre>
-       * ×´Ì¬·¢Éú¸Ä±äµÄÊ±¼ä´Á
+       * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„æ—¶é—´æˆ³
        * </pre>
        */
       java.lang.String getStateChangedTime();
@@ -3056,7 +3056,7 @@ public final class PayloadProtoBuf {
        * <code>optional string stateChangedTime = 3;</code>
        *
        * <pre>
-       * ×´Ì¬·¢Éú¸Ä±äµÄÊ±¼ä´Á
+       * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„æ—¶é—´æˆ³
        * </pre>
        */
       com.google.protobuf.ByteString
@@ -3066,7 +3066,7 @@ public final class PayloadProtoBuf {
        * <code>repeated string requStatesFriendUsernameList = 4;</code>
        *
        * <pre>
-       * Ö÷¶¯ÇëÇóºÃÓÑµÄ×´Ì¬µÄºÃÓÑÓÃ»§ÃûÁĞ±í
+       * ä¸»åŠ¨è¯·æ±‚å¥½å‹çš„çŠ¶æ€çš„å¥½å‹ç”¨æˆ·ååˆ—è¡¨
        * </pre>
        */
       com.google.protobuf.ProtocolStringList
@@ -3075,7 +3075,7 @@ public final class PayloadProtoBuf {
        * <code>repeated string requStatesFriendUsernameList = 4;</code>
        *
        * <pre>
-       * Ö÷¶¯ÇëÇóºÃÓÑµÄ×´Ì¬µÄºÃÓÑÓÃ»§ÃûÁĞ±í
+       * ä¸»åŠ¨è¯·æ±‚å¥½å‹çš„çŠ¶æ€çš„å¥½å‹ç”¨æˆ·ååˆ—è¡¨
        * </pre>
        */
       int getRequStatesFriendUsernameListCount();
@@ -3083,7 +3083,7 @@ public final class PayloadProtoBuf {
        * <code>repeated string requStatesFriendUsernameList = 4;</code>
        *
        * <pre>
-       * Ö÷¶¯ÇëÇóºÃÓÑµÄ×´Ì¬µÄºÃÓÑÓÃ»§ÃûÁĞ±í
+       * ä¸»åŠ¨è¯·æ±‚å¥½å‹çš„çŠ¶æ€çš„å¥½å‹ç”¨æˆ·ååˆ—è¡¨
        * </pre>
        */
       java.lang.String getRequStatesFriendUsernameList(int index);
@@ -3091,7 +3091,7 @@ public final class PayloadProtoBuf {
        * <code>repeated string requStatesFriendUsernameList = 4;</code>
        *
        * <pre>
-       * Ö÷¶¯ÇëÇóºÃÓÑµÄ×´Ì¬µÄºÃÓÑÓÃ»§ÃûÁĞ±í
+       * ä¸»åŠ¨è¯·æ±‚å¥½å‹çš„çŠ¶æ€çš„å¥½å‹ç”¨æˆ·ååˆ—è¡¨
        * </pre>
        */
       com.google.protobuf.ByteString
@@ -3101,7 +3101,7 @@ public final class PayloadProtoBuf {
        * <code>repeated bool respStatesList = 5;</code>
        *
        * <pre>
-       * »Ø´«²éÑ¯µÃµ½µÄºÃÓÑ×´Ì¬ÁĞ±í
+       * å›ä¼ æŸ¥è¯¢å¾—åˆ°çš„å¥½å‹çŠ¶æ€åˆ—è¡¨
        * </pre>
        */
       java.util.List<java.lang.Boolean> getRespStatesListList();
@@ -3109,7 +3109,7 @@ public final class PayloadProtoBuf {
        * <code>repeated bool respStatesList = 5;</code>
        *
        * <pre>
-       * »Ø´«²éÑ¯µÃµ½µÄºÃÓÑ×´Ì¬ÁĞ±í
+       * å›ä¼ æŸ¥è¯¢å¾—åˆ°çš„å¥½å‹çŠ¶æ€åˆ—è¡¨
        * </pre>
        */
       int getRespStatesListCount();
@@ -3117,7 +3117,7 @@ public final class PayloadProtoBuf {
        * <code>repeated bool respStatesList = 5;</code>
        *
        * <pre>
-       * »Ø´«²éÑ¯µÃµ½µÄºÃÓÑ×´Ì¬ÁĞ±í
+       * å›ä¼ æŸ¥è¯¢å¾—åˆ°çš„å¥½å‹çŠ¶æ€åˆ—è¡¨
        * </pre>
        */
       boolean getRespStatesList(int index);
@@ -3126,7 +3126,7 @@ public final class PayloadProtoBuf {
        * <code>optional int32 result = 6;</code>
        *
        * <pre>
-       * ²Ù×÷½á¹û
+       * æ“ä½œç»“æœ
        * </pre>
        */
       boolean hasResult();
@@ -3134,7 +3134,7 @@ public final class PayloadProtoBuf {
        * <code>optional int32 result = 6;</code>
        *
        * <pre>
-       * ²Ù×÷½á¹û
+       * æ“ä½œç»“æœ
        * </pre>
        */
       int getResult();
@@ -3143,7 +3143,7 @@ public final class PayloadProtoBuf {
      * Protobuf type {@code io.moquette.payload.protobuf.Payload.StatesManager}
      *
      * <pre>
-     * ×´Ì¬¹ÜÀíÌå
+     * çŠ¶æ€ç®¡ç†ä½“
      * </pre>
      */
     public static final class StatesManager extends
@@ -3291,7 +3291,7 @@ public final class PayloadProtoBuf {
        * <code>optional string username = 1;</code>
        *
        * <pre>
-       * ×´Ì¬·¢Éú¸Ä±äµÄÓÃ»§Ãû
+       * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„ç”¨æˆ·å
        * </pre>
        */
       public boolean hasUsername() {
@@ -3301,7 +3301,7 @@ public final class PayloadProtoBuf {
        * <code>optional string username = 1;</code>
        *
        * <pre>
-       * ×´Ì¬·¢Éú¸Ä±äµÄÓÃ»§Ãû
+       * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„ç”¨æˆ·å
        * </pre>
        */
       public java.lang.String getUsername() {
@@ -3322,7 +3322,7 @@ public final class PayloadProtoBuf {
        * <code>optional string username = 1;</code>
        *
        * <pre>
-       * ×´Ì¬·¢Éú¸Ä±äµÄÓÃ»§Ãû
+       * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„ç”¨æˆ·å
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -3345,7 +3345,7 @@ public final class PayloadProtoBuf {
        * <code>optional bool online = 2;</code>
        *
        * <pre>
-       * ÊÇ·ñÔÚÏß±êÖ¾
+       * æ˜¯å¦åœ¨çº¿æ ‡å¿—
        * </pre>
        */
       public boolean hasOnline() {
@@ -3355,7 +3355,7 @@ public final class PayloadProtoBuf {
        * <code>optional bool online = 2;</code>
        *
        * <pre>
-       * ÊÇ·ñÔÚÏß±êÖ¾
+       * æ˜¯å¦åœ¨çº¿æ ‡å¿—
        * </pre>
        */
       public boolean getOnline() {
@@ -3368,7 +3368,7 @@ public final class PayloadProtoBuf {
        * <code>optional string stateChangedTime = 3;</code>
        *
        * <pre>
-       * ×´Ì¬·¢Éú¸Ä±äµÄÊ±¼ä´Á
+       * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„æ—¶é—´æˆ³
        * </pre>
        */
       public boolean hasStateChangedTime() {
@@ -3378,7 +3378,7 @@ public final class PayloadProtoBuf {
        * <code>optional string stateChangedTime = 3;</code>
        *
        * <pre>
-       * ×´Ì¬·¢Éú¸Ä±äµÄÊ±¼ä´Á
+       * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„æ—¶é—´æˆ³
        * </pre>
        */
       public java.lang.String getStateChangedTime() {
@@ -3399,7 +3399,7 @@ public final class PayloadProtoBuf {
        * <code>optional string stateChangedTime = 3;</code>
        *
        * <pre>
-       * ×´Ì¬·¢Éú¸Ä±äµÄÊ±¼ä´Á
+       * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„æ—¶é—´æˆ³
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -3422,7 +3422,7 @@ public final class PayloadProtoBuf {
        * <code>repeated string requStatesFriendUsernameList = 4;</code>
        *
        * <pre>
-       * Ö÷¶¯ÇëÇóºÃÓÑµÄ×´Ì¬µÄºÃÓÑÓÃ»§ÃûÁĞ±í
+       * ä¸»åŠ¨è¯·æ±‚å¥½å‹çš„çŠ¶æ€çš„å¥½å‹ç”¨æˆ·ååˆ—è¡¨
        * </pre>
        */
       public com.google.protobuf.ProtocolStringList
@@ -3433,7 +3433,7 @@ public final class PayloadProtoBuf {
        * <code>repeated string requStatesFriendUsernameList = 4;</code>
        *
        * <pre>
-       * Ö÷¶¯ÇëÇóºÃÓÑµÄ×´Ì¬µÄºÃÓÑÓÃ»§ÃûÁĞ±í
+       * ä¸»åŠ¨è¯·æ±‚å¥½å‹çš„çŠ¶æ€çš„å¥½å‹ç”¨æˆ·ååˆ—è¡¨
        * </pre>
        */
       public int getRequStatesFriendUsernameListCount() {
@@ -3443,7 +3443,7 @@ public final class PayloadProtoBuf {
        * <code>repeated string requStatesFriendUsernameList = 4;</code>
        *
        * <pre>
-       * Ö÷¶¯ÇëÇóºÃÓÑµÄ×´Ì¬µÄºÃÓÑÓÃ»§ÃûÁĞ±í
+       * ä¸»åŠ¨è¯·æ±‚å¥½å‹çš„çŠ¶æ€çš„å¥½å‹ç”¨æˆ·ååˆ—è¡¨
        * </pre>
        */
       public java.lang.String getRequStatesFriendUsernameList(int index) {
@@ -3453,7 +3453,7 @@ public final class PayloadProtoBuf {
        * <code>repeated string requStatesFriendUsernameList = 4;</code>
        *
        * <pre>
-       * Ö÷¶¯ÇëÇóºÃÓÑµÄ×´Ì¬µÄºÃÓÑÓÃ»§ÃûÁĞ±í
+       * ä¸»åŠ¨è¯·æ±‚å¥½å‹çš„çŠ¶æ€çš„å¥½å‹ç”¨æˆ·ååˆ—è¡¨
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -3467,7 +3467,7 @@ public final class PayloadProtoBuf {
        * <code>repeated bool respStatesList = 5;</code>
        *
        * <pre>
-       * »Ø´«²éÑ¯µÃµ½µÄºÃÓÑ×´Ì¬ÁĞ±í
+       * å›ä¼ æŸ¥è¯¢å¾—åˆ°çš„å¥½å‹çŠ¶æ€åˆ—è¡¨
        * </pre>
        */
       public java.util.List<java.lang.Boolean>
@@ -3478,7 +3478,7 @@ public final class PayloadProtoBuf {
        * <code>repeated bool respStatesList = 5;</code>
        *
        * <pre>
-       * »Ø´«²éÑ¯µÃµ½µÄºÃÓÑ×´Ì¬ÁĞ±í
+       * å›ä¼ æŸ¥è¯¢å¾—åˆ°çš„å¥½å‹çŠ¶æ€åˆ—è¡¨
        * </pre>
        */
       public int getRespStatesListCount() {
@@ -3488,7 +3488,7 @@ public final class PayloadProtoBuf {
        * <code>repeated bool respStatesList = 5;</code>
        *
        * <pre>
-       * »Ø´«²éÑ¯µÃµ½µÄºÃÓÑ×´Ì¬ÁĞ±í
+       * å›ä¼ æŸ¥è¯¢å¾—åˆ°çš„å¥½å‹çŠ¶æ€åˆ—è¡¨
        * </pre>
        */
       public boolean getRespStatesList(int index) {
@@ -3501,7 +3501,7 @@ public final class PayloadProtoBuf {
        * <code>optional int32 result = 6;</code>
        *
        * <pre>
-       * ²Ù×÷½á¹û
+       * æ“ä½œç»“æœ
        * </pre>
        */
       public boolean hasResult() {
@@ -3511,7 +3511,7 @@ public final class PayloadProtoBuf {
        * <code>optional int32 result = 6;</code>
        *
        * <pre>
-       * ²Ù×÷½á¹û
+       * æ“ä½œç»“æœ
        * </pre>
        */
       public int getResult() {
@@ -3673,7 +3673,7 @@ public final class PayloadProtoBuf {
        * Protobuf type {@code io.moquette.payload.protobuf.Payload.StatesManager}
        *
        * <pre>
-       * ×´Ì¬¹ÜÀíÌå
+       * çŠ¶æ€ç®¡ç†ä½“
        * </pre>
        */
       public static final class Builder extends
@@ -3831,7 +3831,7 @@ public final class PayloadProtoBuf {
          * <code>optional string username = 1;</code>
          *
          * <pre>
-         * ×´Ì¬·¢Éú¸Ä±äµÄÓÃ»§Ãû
+         * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„ç”¨æˆ·å
          * </pre>
          */
         public boolean hasUsername() {
@@ -3841,7 +3841,7 @@ public final class PayloadProtoBuf {
          * <code>optional string username = 1;</code>
          *
          * <pre>
-         * ×´Ì¬·¢Éú¸Ä±äµÄÓÃ»§Ãû
+         * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„ç”¨æˆ·å
          * </pre>
          */
         public java.lang.String getUsername() {
@@ -3862,7 +3862,7 @@ public final class PayloadProtoBuf {
          * <code>optional string username = 1;</code>
          *
          * <pre>
-         * ×´Ì¬·¢Éú¸Ä±äµÄÓÃ»§Ãû
+         * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„ç”¨æˆ·å
          * </pre>
          */
         public com.google.protobuf.ByteString
@@ -3882,7 +3882,7 @@ public final class PayloadProtoBuf {
          * <code>optional string username = 1;</code>
          *
          * <pre>
-         * ×´Ì¬·¢Éú¸Ä±äµÄÓÃ»§Ãû
+         * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„ç”¨æˆ·å
          * </pre>
          */
         public Builder setUsername(
@@ -3899,7 +3899,7 @@ public final class PayloadProtoBuf {
          * <code>optional string username = 1;</code>
          *
          * <pre>
-         * ×´Ì¬·¢Éú¸Ä±äµÄÓÃ»§Ãû
+         * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„ç”¨æˆ·å
          * </pre>
          */
         public Builder clearUsername() {
@@ -3912,7 +3912,7 @@ public final class PayloadProtoBuf {
          * <code>optional string username = 1;</code>
          *
          * <pre>
-         * ×´Ì¬·¢Éú¸Ä±äµÄÓÃ»§Ãû
+         * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„ç”¨æˆ·å
          * </pre>
          */
         public Builder setUsernameBytes(
@@ -3931,7 +3931,7 @@ public final class PayloadProtoBuf {
          * <code>optional bool online = 2;</code>
          *
          * <pre>
-         * ÊÇ·ñÔÚÏß±êÖ¾
+         * æ˜¯å¦åœ¨çº¿æ ‡å¿—
          * </pre>
          */
         public boolean hasOnline() {
@@ -3941,7 +3941,7 @@ public final class PayloadProtoBuf {
          * <code>optional bool online = 2;</code>
          *
          * <pre>
-         * ÊÇ·ñÔÚÏß±êÖ¾
+         * æ˜¯å¦åœ¨çº¿æ ‡å¿—
          * </pre>
          */
         public boolean getOnline() {
@@ -3951,7 +3951,7 @@ public final class PayloadProtoBuf {
          * <code>optional bool online = 2;</code>
          *
          * <pre>
-         * ÊÇ·ñÔÚÏß±êÖ¾
+         * æ˜¯å¦åœ¨çº¿æ ‡å¿—
          * </pre>
          */
         public Builder setOnline(boolean value) {
@@ -3964,7 +3964,7 @@ public final class PayloadProtoBuf {
          * <code>optional bool online = 2;</code>
          *
          * <pre>
-         * ÊÇ·ñÔÚÏß±êÖ¾
+         * æ˜¯å¦åœ¨çº¿æ ‡å¿—
          * </pre>
          */
         public Builder clearOnline() {
@@ -3979,7 +3979,7 @@ public final class PayloadProtoBuf {
          * <code>optional string stateChangedTime = 3;</code>
          *
          * <pre>
-         * ×´Ì¬·¢Éú¸Ä±äµÄÊ±¼ä´Á
+         * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„æ—¶é—´æˆ³
          * </pre>
          */
         public boolean hasStateChangedTime() {
@@ -3989,7 +3989,7 @@ public final class PayloadProtoBuf {
          * <code>optional string stateChangedTime = 3;</code>
          *
          * <pre>
-         * ×´Ì¬·¢Éú¸Ä±äµÄÊ±¼ä´Á
+         * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„æ—¶é—´æˆ³
          * </pre>
          */
         public java.lang.String getStateChangedTime() {
@@ -4010,7 +4010,7 @@ public final class PayloadProtoBuf {
          * <code>optional string stateChangedTime = 3;</code>
          *
          * <pre>
-         * ×´Ì¬·¢Éú¸Ä±äµÄÊ±¼ä´Á
+         * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„æ—¶é—´æˆ³
          * </pre>
          */
         public com.google.protobuf.ByteString
@@ -4030,7 +4030,7 @@ public final class PayloadProtoBuf {
          * <code>optional string stateChangedTime = 3;</code>
          *
          * <pre>
-         * ×´Ì¬·¢Éú¸Ä±äµÄÊ±¼ä´Á
+         * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„æ—¶é—´æˆ³
          * </pre>
          */
         public Builder setStateChangedTime(
@@ -4047,7 +4047,7 @@ public final class PayloadProtoBuf {
          * <code>optional string stateChangedTime = 3;</code>
          *
          * <pre>
-         * ×´Ì¬·¢Éú¸Ä±äµÄÊ±¼ä´Á
+         * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„æ—¶é—´æˆ³
          * </pre>
          */
         public Builder clearStateChangedTime() {
@@ -4060,7 +4060,7 @@ public final class PayloadProtoBuf {
          * <code>optional string stateChangedTime = 3;</code>
          *
          * <pre>
-         * ×´Ì¬·¢Éú¸Ä±äµÄÊ±¼ä´Á
+         * çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„æ—¶é—´æˆ³
          * </pre>
          */
         public Builder setStateChangedTimeBytes(
@@ -4085,7 +4085,7 @@ public final class PayloadProtoBuf {
          * <code>repeated string requStatesFriendUsernameList = 4;</code>
          *
          * <pre>
-         * Ö÷¶¯ÇëÇóºÃÓÑµÄ×´Ì¬µÄºÃÓÑÓÃ»§ÃûÁĞ±í
+         * ä¸»åŠ¨è¯·æ±‚å¥½å‹çš„çŠ¶æ€çš„å¥½å‹ç”¨æˆ·ååˆ—è¡¨
          * </pre>
          */
         public com.google.protobuf.ProtocolStringList
@@ -4096,7 +4096,7 @@ public final class PayloadProtoBuf {
          * <code>repeated string requStatesFriendUsernameList = 4;</code>
          *
          * <pre>
-         * Ö÷¶¯ÇëÇóºÃÓÑµÄ×´Ì¬µÄºÃÓÑÓÃ»§ÃûÁĞ±í
+         * ä¸»åŠ¨è¯·æ±‚å¥½å‹çš„çŠ¶æ€çš„å¥½å‹ç”¨æˆ·ååˆ—è¡¨
          * </pre>
          */
         public int getRequStatesFriendUsernameListCount() {
@@ -4106,7 +4106,7 @@ public final class PayloadProtoBuf {
          * <code>repeated string requStatesFriendUsernameList = 4;</code>
          *
          * <pre>
-         * Ö÷¶¯ÇëÇóºÃÓÑµÄ×´Ì¬µÄºÃÓÑÓÃ»§ÃûÁĞ±í
+         * ä¸»åŠ¨è¯·æ±‚å¥½å‹çš„çŠ¶æ€çš„å¥½å‹ç”¨æˆ·ååˆ—è¡¨
          * </pre>
          */
         public java.lang.String getRequStatesFriendUsernameList(int index) {
@@ -4116,7 +4116,7 @@ public final class PayloadProtoBuf {
          * <code>repeated string requStatesFriendUsernameList = 4;</code>
          *
          * <pre>
-         * Ö÷¶¯ÇëÇóºÃÓÑµÄ×´Ì¬µÄºÃÓÑÓÃ»§ÃûÁĞ±í
+         * ä¸»åŠ¨è¯·æ±‚å¥½å‹çš„çŠ¶æ€çš„å¥½å‹ç”¨æˆ·ååˆ—è¡¨
          * </pre>
          */
         public com.google.protobuf.ByteString
@@ -4127,7 +4127,7 @@ public final class PayloadProtoBuf {
          * <code>repeated string requStatesFriendUsernameList = 4;</code>
          *
          * <pre>
-         * Ö÷¶¯ÇëÇóºÃÓÑµÄ×´Ì¬µÄºÃÓÑÓÃ»§ÃûÁĞ±í
+         * ä¸»åŠ¨è¯·æ±‚å¥½å‹çš„çŠ¶æ€çš„å¥½å‹ç”¨æˆ·ååˆ—è¡¨
          * </pre>
          */
         public Builder setRequStatesFriendUsernameList(
@@ -4144,7 +4144,7 @@ public final class PayloadProtoBuf {
          * <code>repeated string requStatesFriendUsernameList = 4;</code>
          *
          * <pre>
-         * Ö÷¶¯ÇëÇóºÃÓÑµÄ×´Ì¬µÄºÃÓÑÓÃ»§ÃûÁĞ±í
+         * ä¸»åŠ¨è¯·æ±‚å¥½å‹çš„çŠ¶æ€çš„å¥½å‹ç”¨æˆ·ååˆ—è¡¨
          * </pre>
          */
         public Builder addRequStatesFriendUsernameList(
@@ -4161,7 +4161,7 @@ public final class PayloadProtoBuf {
          * <code>repeated string requStatesFriendUsernameList = 4;</code>
          *
          * <pre>
-         * Ö÷¶¯ÇëÇóºÃÓÑµÄ×´Ì¬µÄºÃÓÑÓÃ»§ÃûÁĞ±í
+         * ä¸»åŠ¨è¯·æ±‚å¥½å‹çš„çŠ¶æ€çš„å¥½å‹ç”¨æˆ·ååˆ—è¡¨
          * </pre>
          */
         public Builder addAllRequStatesFriendUsernameList(
@@ -4176,7 +4176,7 @@ public final class PayloadProtoBuf {
          * <code>repeated string requStatesFriendUsernameList = 4;</code>
          *
          * <pre>
-         * Ö÷¶¯ÇëÇóºÃÓÑµÄ×´Ì¬µÄºÃÓÑÓÃ»§ÃûÁĞ±í
+         * ä¸»åŠ¨è¯·æ±‚å¥½å‹çš„çŠ¶æ€çš„å¥½å‹ç”¨æˆ·ååˆ—è¡¨
          * </pre>
          */
         public Builder clearRequStatesFriendUsernameList() {
@@ -4189,7 +4189,7 @@ public final class PayloadProtoBuf {
          * <code>repeated string requStatesFriendUsernameList = 4;</code>
          *
          * <pre>
-         * Ö÷¶¯ÇëÇóºÃÓÑµÄ×´Ì¬µÄºÃÓÑÓÃ»§ÃûÁĞ±í
+         * ä¸»åŠ¨è¯·æ±‚å¥½å‹çš„çŠ¶æ€çš„å¥½å‹ç”¨æˆ·ååˆ—è¡¨
          * </pre>
          */
         public Builder addRequStatesFriendUsernameListBytes(
@@ -4214,7 +4214,7 @@ public final class PayloadProtoBuf {
          * <code>repeated bool respStatesList = 5;</code>
          *
          * <pre>
-         * »Ø´«²éÑ¯µÃµ½µÄºÃÓÑ×´Ì¬ÁĞ±í
+         * å›ä¼ æŸ¥è¯¢å¾—åˆ°çš„å¥½å‹çŠ¶æ€åˆ—è¡¨
          * </pre>
          */
         public java.util.List<java.lang.Boolean>
@@ -4225,7 +4225,7 @@ public final class PayloadProtoBuf {
          * <code>repeated bool respStatesList = 5;</code>
          *
          * <pre>
-         * »Ø´«²éÑ¯µÃµ½µÄºÃÓÑ×´Ì¬ÁĞ±í
+         * å›ä¼ æŸ¥è¯¢å¾—åˆ°çš„å¥½å‹çŠ¶æ€åˆ—è¡¨
          * </pre>
          */
         public int getRespStatesListCount() {
@@ -4235,7 +4235,7 @@ public final class PayloadProtoBuf {
          * <code>repeated bool respStatesList = 5;</code>
          *
          * <pre>
-         * »Ø´«²éÑ¯µÃµ½µÄºÃÓÑ×´Ì¬ÁĞ±í
+         * å›ä¼ æŸ¥è¯¢å¾—åˆ°çš„å¥½å‹çŠ¶æ€åˆ—è¡¨
          * </pre>
          */
         public boolean getRespStatesList(int index) {
@@ -4245,7 +4245,7 @@ public final class PayloadProtoBuf {
          * <code>repeated bool respStatesList = 5;</code>
          *
          * <pre>
-         * »Ø´«²éÑ¯µÃµ½µÄºÃÓÑ×´Ì¬ÁĞ±í
+         * å›ä¼ æŸ¥è¯¢å¾—åˆ°çš„å¥½å‹çŠ¶æ€åˆ—è¡¨
          * </pre>
          */
         public Builder setRespStatesList(
@@ -4259,7 +4259,7 @@ public final class PayloadProtoBuf {
          * <code>repeated bool respStatesList = 5;</code>
          *
          * <pre>
-         * »Ø´«²éÑ¯µÃµ½µÄºÃÓÑ×´Ì¬ÁĞ±í
+         * å›ä¼ æŸ¥è¯¢å¾—åˆ°çš„å¥½å‹çŠ¶æ€åˆ—è¡¨
          * </pre>
          */
         public Builder addRespStatesList(boolean value) {
@@ -4272,7 +4272,7 @@ public final class PayloadProtoBuf {
          * <code>repeated bool respStatesList = 5;</code>
          *
          * <pre>
-         * »Ø´«²éÑ¯µÃµ½µÄºÃÓÑ×´Ì¬ÁĞ±í
+         * å›ä¼ æŸ¥è¯¢å¾—åˆ°çš„å¥½å‹çŠ¶æ€åˆ—è¡¨
          * </pre>
          */
         public Builder addAllRespStatesList(
@@ -4287,7 +4287,7 @@ public final class PayloadProtoBuf {
          * <code>repeated bool respStatesList = 5;</code>
          *
          * <pre>
-         * »Ø´«²éÑ¯µÃµ½µÄºÃÓÑ×´Ì¬ÁĞ±í
+         * å›ä¼ æŸ¥è¯¢å¾—åˆ°çš„å¥½å‹çŠ¶æ€åˆ—è¡¨
          * </pre>
          */
         public Builder clearRespStatesList() {
@@ -4302,7 +4302,7 @@ public final class PayloadProtoBuf {
          * <code>optional int32 result = 6;</code>
          *
          * <pre>
-         * ²Ù×÷½á¹û
+         * æ“ä½œç»“æœ
          * </pre>
          */
         public boolean hasResult() {
@@ -4312,7 +4312,7 @@ public final class PayloadProtoBuf {
          * <code>optional int32 result = 6;</code>
          *
          * <pre>
-         * ²Ù×÷½á¹û
+         * æ“ä½œç»“æœ
          * </pre>
          */
         public int getResult() {
@@ -4322,7 +4322,7 @@ public final class PayloadProtoBuf {
          * <code>optional int32 result = 6;</code>
          *
          * <pre>
-         * ²Ù×÷½á¹û
+         * æ“ä½œç»“æœ
          * </pre>
          */
         public Builder setResult(int value) {
@@ -4335,7 +4335,7 @@ public final class PayloadProtoBuf {
          * <code>optional int32 result = 6;</code>
          *
          * <pre>
-         * ²Ù×÷½á¹û
+         * æ“ä½œç»“æœ
          * </pre>
          */
         public Builder clearResult() {
@@ -4363,7 +4363,7 @@ public final class PayloadProtoBuf {
      * <code>optional int32 messageType = 1;</code>
      *
      * <pre>
-     * IMÏûÏ¢ÀàĞÍ
+     * IMæ¶ˆæ¯ç±»å‹
      * </pre>
      */
     public boolean hasMessageType() {
@@ -4373,7 +4373,7 @@ public final class PayloadProtoBuf {
      * <code>optional int32 messageType = 1;</code>
      *
      * <pre>
-     * IMÏûÏ¢ÀàĞÍ
+     * IMæ¶ˆæ¯ç±»å‹
      * </pre>
      */
     public int getMessageType() {
@@ -4386,7 +4386,7 @@ public final class PayloadProtoBuf {
      * <code>optional .io.moquette.payload.protobuf.Payload.FriendManager friendManager = 2;</code>
      *
      * <pre>
-     * ºÃÓÑ¹ÜÀí¶ÔÏó
+     * å¥½å‹ç®¡ç†å¯¹è±¡
      * </pre>
      */
     public boolean hasFriendManager() {
@@ -4396,7 +4396,7 @@ public final class PayloadProtoBuf {
      * <code>optional .io.moquette.payload.protobuf.Payload.FriendManager friendManager = 2;</code>
      *
      * <pre>
-     * ºÃÓÑ¹ÜÀí¶ÔÏó
+     * å¥½å‹ç®¡ç†å¯¹è±¡
      * </pre>
      */
     public io.moquette.payload.protobuf.PayloadProtoBuf.Payload.FriendManager getFriendManager() {
@@ -4409,7 +4409,7 @@ public final class PayloadProtoBuf {
      * <code>optional .io.moquette.payload.protobuf.Payload.MessageManager messageManager = 3;</code>
      *
      * <pre>
-     * ÏûÏ¢¹ÜÀí¶ÔÏó
+     * æ¶ˆæ¯ç®¡ç†å¯¹è±¡
      * </pre>
      */
     public boolean hasMessageManager() {
@@ -4419,7 +4419,7 @@ public final class PayloadProtoBuf {
      * <code>optional .io.moquette.payload.protobuf.Payload.MessageManager messageManager = 3;</code>
      *
      * <pre>
-     * ÏûÏ¢¹ÜÀí¶ÔÏó
+     * æ¶ˆæ¯ç®¡ç†å¯¹è±¡
      * </pre>
      */
     public io.moquette.payload.protobuf.PayloadProtoBuf.Payload.MessageManager getMessageManager() {
@@ -4432,7 +4432,7 @@ public final class PayloadProtoBuf {
      * <code>optional .io.moquette.payload.protobuf.Payload.StatesManager statesManager = 4;</code>
      *
      * <pre>
-     * ×´Ì¬¹ÜÀí¶ÔÏó
+     * çŠ¶æ€ç®¡ç†å¯¹è±¡
      * </pre>
      */
     public boolean hasStatesManager() {
@@ -4442,7 +4442,7 @@ public final class PayloadProtoBuf {
      * <code>optional .io.moquette.payload.protobuf.Payload.StatesManager statesManager = 4;</code>
      *
      * <pre>
-     * ×´Ì¬¹ÜÀí¶ÔÏó
+     * çŠ¶æ€ç®¡ç†å¯¹è±¡
      * </pre>
      */
     public io.moquette.payload.protobuf.PayloadProtoBuf.Payload.StatesManager getStatesManager() {
@@ -4697,7 +4697,7 @@ public final class PayloadProtoBuf {
        * <code>optional int32 messageType = 1;</code>
        *
        * <pre>
-       * IMÏûÏ¢ÀàĞÍ
+       * IMæ¶ˆæ¯ç±»å‹
        * </pre>
        */
       public boolean hasMessageType() {
@@ -4707,7 +4707,7 @@ public final class PayloadProtoBuf {
        * <code>optional int32 messageType = 1;</code>
        *
        * <pre>
-       * IMÏûÏ¢ÀàĞÍ
+       * IMæ¶ˆæ¯ç±»å‹
        * </pre>
        */
       public int getMessageType() {
@@ -4717,7 +4717,7 @@ public final class PayloadProtoBuf {
        * <code>optional int32 messageType = 1;</code>
        *
        * <pre>
-       * IMÏûÏ¢ÀàĞÍ
+       * IMæ¶ˆæ¯ç±»å‹
        * </pre>
        */
       public Builder setMessageType(int value) {
@@ -4730,7 +4730,7 @@ public final class PayloadProtoBuf {
        * <code>optional int32 messageType = 1;</code>
        *
        * <pre>
-       * IMÏûÏ¢ÀàĞÍ
+       * IMæ¶ˆæ¯ç±»å‹
        * </pre>
        */
       public Builder clearMessageType() {
@@ -4745,7 +4745,7 @@ public final class PayloadProtoBuf {
        * <code>optional .io.moquette.payload.protobuf.Payload.FriendManager friendManager = 2;</code>
        *
        * <pre>
-       * ºÃÓÑ¹ÜÀí¶ÔÏó
+       * å¥½å‹ç®¡ç†å¯¹è±¡
        * </pre>
        */
       public boolean hasFriendManager() {
@@ -4755,7 +4755,7 @@ public final class PayloadProtoBuf {
        * <code>optional .io.moquette.payload.protobuf.Payload.FriendManager friendManager = 2;</code>
        *
        * <pre>
-       * ºÃÓÑ¹ÜÀí¶ÔÏó
+       * å¥½å‹ç®¡ç†å¯¹è±¡
        * </pre>
        */
       public io.moquette.payload.protobuf.PayloadProtoBuf.Payload.FriendManager getFriendManager() {
@@ -4765,7 +4765,7 @@ public final class PayloadProtoBuf {
        * <code>optional .io.moquette.payload.protobuf.Payload.FriendManager friendManager = 2;</code>
        *
        * <pre>
-       * ºÃÓÑ¹ÜÀí¶ÔÏó
+       * å¥½å‹ç®¡ç†å¯¹è±¡
        * </pre>
        */
       public Builder setFriendManager(io.moquette.payload.protobuf.PayloadProtoBuf.Payload.FriendManager value) {
@@ -4781,7 +4781,7 @@ public final class PayloadProtoBuf {
        * <code>optional .io.moquette.payload.protobuf.Payload.FriendManager friendManager = 2;</code>
        *
        * <pre>
-       * ºÃÓÑ¹ÜÀí¶ÔÏó
+       * å¥½å‹ç®¡ç†å¯¹è±¡
        * </pre>
        */
       public Builder setFriendManager(
@@ -4795,7 +4795,7 @@ public final class PayloadProtoBuf {
        * <code>optional .io.moquette.payload.protobuf.Payload.FriendManager friendManager = 2;</code>
        *
        * <pre>
-       * ºÃÓÑ¹ÜÀí¶ÔÏó
+       * å¥½å‹ç®¡ç†å¯¹è±¡
        * </pre>
        */
       public Builder mergeFriendManager(io.moquette.payload.protobuf.PayloadProtoBuf.Payload.FriendManager value) {
@@ -4814,7 +4814,7 @@ public final class PayloadProtoBuf {
        * <code>optional .io.moquette.payload.protobuf.Payload.FriendManager friendManager = 2;</code>
        *
        * <pre>
-       * ºÃÓÑ¹ÜÀí¶ÔÏó
+       * å¥½å‹ç®¡ç†å¯¹è±¡
        * </pre>
        */
       public Builder clearFriendManager() {
@@ -4829,7 +4829,7 @@ public final class PayloadProtoBuf {
        * <code>optional .io.moquette.payload.protobuf.Payload.MessageManager messageManager = 3;</code>
        *
        * <pre>
-       * ÏûÏ¢¹ÜÀí¶ÔÏó
+       * æ¶ˆæ¯ç®¡ç†å¯¹è±¡
        * </pre>
        */
       public boolean hasMessageManager() {
@@ -4839,7 +4839,7 @@ public final class PayloadProtoBuf {
        * <code>optional .io.moquette.payload.protobuf.Payload.MessageManager messageManager = 3;</code>
        *
        * <pre>
-       * ÏûÏ¢¹ÜÀí¶ÔÏó
+       * æ¶ˆæ¯ç®¡ç†å¯¹è±¡
        * </pre>
        */
       public io.moquette.payload.protobuf.PayloadProtoBuf.Payload.MessageManager getMessageManager() {
@@ -4849,7 +4849,7 @@ public final class PayloadProtoBuf {
        * <code>optional .io.moquette.payload.protobuf.Payload.MessageManager messageManager = 3;</code>
        *
        * <pre>
-       * ÏûÏ¢¹ÜÀí¶ÔÏó
+       * æ¶ˆæ¯ç®¡ç†å¯¹è±¡
        * </pre>
        */
       public Builder setMessageManager(io.moquette.payload.protobuf.PayloadProtoBuf.Payload.MessageManager value) {
@@ -4865,7 +4865,7 @@ public final class PayloadProtoBuf {
        * <code>optional .io.moquette.payload.protobuf.Payload.MessageManager messageManager = 3;</code>
        *
        * <pre>
-       * ÏûÏ¢¹ÜÀí¶ÔÏó
+       * æ¶ˆæ¯ç®¡ç†å¯¹è±¡
        * </pre>
        */
       public Builder setMessageManager(
@@ -4879,7 +4879,7 @@ public final class PayloadProtoBuf {
        * <code>optional .io.moquette.payload.protobuf.Payload.MessageManager messageManager = 3;</code>
        *
        * <pre>
-       * ÏûÏ¢¹ÜÀí¶ÔÏó
+       * æ¶ˆæ¯ç®¡ç†å¯¹è±¡
        * </pre>
        */
       public Builder mergeMessageManager(io.moquette.payload.protobuf.PayloadProtoBuf.Payload.MessageManager value) {
@@ -4898,7 +4898,7 @@ public final class PayloadProtoBuf {
        * <code>optional .io.moquette.payload.protobuf.Payload.MessageManager messageManager = 3;</code>
        *
        * <pre>
-       * ÏûÏ¢¹ÜÀí¶ÔÏó
+       * æ¶ˆæ¯ç®¡ç†å¯¹è±¡
        * </pre>
        */
       public Builder clearMessageManager() {
@@ -4913,7 +4913,7 @@ public final class PayloadProtoBuf {
        * <code>optional .io.moquette.payload.protobuf.Payload.StatesManager statesManager = 4;</code>
        *
        * <pre>
-       * ×´Ì¬¹ÜÀí¶ÔÏó
+       * çŠ¶æ€ç®¡ç†å¯¹è±¡
        * </pre>
        */
       public boolean hasStatesManager() {
@@ -4923,7 +4923,7 @@ public final class PayloadProtoBuf {
        * <code>optional .io.moquette.payload.protobuf.Payload.StatesManager statesManager = 4;</code>
        *
        * <pre>
-       * ×´Ì¬¹ÜÀí¶ÔÏó
+       * çŠ¶æ€ç®¡ç†å¯¹è±¡
        * </pre>
        */
       public io.moquette.payload.protobuf.PayloadProtoBuf.Payload.StatesManager getStatesManager() {
@@ -4933,7 +4933,7 @@ public final class PayloadProtoBuf {
        * <code>optional .io.moquette.payload.protobuf.Payload.StatesManager statesManager = 4;</code>
        *
        * <pre>
-       * ×´Ì¬¹ÜÀí¶ÔÏó
+       * çŠ¶æ€ç®¡ç†å¯¹è±¡
        * </pre>
        */
       public Builder setStatesManager(io.moquette.payload.protobuf.PayloadProtoBuf.Payload.StatesManager value) {
@@ -4949,7 +4949,7 @@ public final class PayloadProtoBuf {
        * <code>optional .io.moquette.payload.protobuf.Payload.StatesManager statesManager = 4;</code>
        *
        * <pre>
-       * ×´Ì¬¹ÜÀí¶ÔÏó
+       * çŠ¶æ€ç®¡ç†å¯¹è±¡
        * </pre>
        */
       public Builder setStatesManager(
@@ -4963,7 +4963,7 @@ public final class PayloadProtoBuf {
        * <code>optional .io.moquette.payload.protobuf.Payload.StatesManager statesManager = 4;</code>
        *
        * <pre>
-       * ×´Ì¬¹ÜÀí¶ÔÏó
+       * çŠ¶æ€ç®¡ç†å¯¹è±¡
        * </pre>
        */
       public Builder mergeStatesManager(io.moquette.payload.protobuf.PayloadProtoBuf.Payload.StatesManager value) {
@@ -4982,7 +4982,7 @@ public final class PayloadProtoBuf {
        * <code>optional .io.moquette.payload.protobuf.Payload.StatesManager statesManager = 4;</code>
        *
        * <pre>
-       * ×´Ì¬¹ÜÀí¶ÔÏó
+       * çŠ¶æ€ç®¡ç†å¯¹è±¡
        * </pre>
        */
       public Builder clearStatesManager() {

@@ -16,17 +16,19 @@
 package io.moquette.spi.impl;
 
 import io.moquette.BrokerConstants;
-import io.moquette.spi.IMessagesStore;
 import io.moquette.interception.InterceptHandler;
 import io.moquette.server.config.IConfig;
+import io.moquette.spi.IMessagesStore;
 import io.moquette.spi.ISessionsStore;
-import io.moquette.spi.impl.security.*;
+import io.moquette.spi.impl.security.ACLFileParser;
+import io.moquette.spi.impl.security.AcceptAllAuthenticator;
+import io.moquette.spi.impl.security.DenyAllAuthorizator;
+import io.moquette.spi.impl.security.FileAuthenticator;
+import io.moquette.spi.impl.security.PermitAllAuthorizator;
 import io.moquette.spi.impl.subscriptions.SubscriptionsStore;
 import io.moquette.spi.persistence.MapDBPersistentStore;
 import io.moquette.spi.security.IAuthenticator;
 import io.moquette.spi.security.IAuthorizator;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;
@@ -34,6 +36,9 @@ import java.lang.reflect.Method;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
@@ -62,8 +67,18 @@ public class SimpleMessaging {
 
     private static SimpleMessaging INSTANCE;
     
-    private final ProtocolProcessor m_processor = new ProtocolProcessor();
+    /**
+     * 为了达到通过使用代理产生增强的ProtocolProcessor对象, m_processor对象在动态代理时会修改其值
+     * m_processor的定义由private final --> private，同时增加了一个public void setM_processor方法，
+     * 方便动态代理时，ServerProxy.startServer(para1,para2,para3,para4,para5)方法执行前，
+     * 调用setM_processor方法修改m_processor的值为ProtocolProcessorProxy代理对象.
+     */
+    private ProtocolProcessor m_processor = new ProtocolProcessor();
 
+    public void setM_processor(ProtocolProcessor m_processor) {
+		this.m_processor = m_processor;
+	}
+    
     private SimpleMessaging() {
     }
 
